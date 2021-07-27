@@ -19,16 +19,26 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // App.get is telling express to get whatever is at the designated url path. In this case, we are getting our html file
+
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "public", "index.html"));
 });
+
+// Using the Express static middleware, express will serve static html files in whatever folder is being pointed to
+
+// app.use(express.static(path.join(__dirname, "public")));
 
 // Here we are only sending text but we can format HTML inside the send function as well
 app.get("/hello", (req, res) => {
 	res.send("Hello!");
 });
 
+// Importing our user's array and displaying those to our /api/users path
+
+const users = require("./data/users.js");
+app.get("/api/users", (req, res) => res.json(users));
+
 // Finally, we ask our express app to listen to a certain port where our files can be posted
-app.listen(PORT, () => {
-	console.log(`App is listening on http://localhost:${PORT}`);
-});
+app.listen(PORT, () =>
+	console.log(`App is listening on http://localhost:${PORT}`)
+);
