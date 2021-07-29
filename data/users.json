@@ -1,0 +1,25 @@
+{
+	"villains": [
+		{
+			"name": "Darth Vader"
+		},
+		{
+			"name": "Darth Maul"
+		},
+		{
+			"name": "Emperor Palpatine"
+		}
+	],
+
+	"heros": [
+		{
+			"name": "Han Solo"
+		},
+		{
+			"name": "Luke Skywalker"
+		},
+		{
+			"name": "Chewbaca"
+		}
+	]
+}
