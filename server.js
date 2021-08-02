@@ -18,27 +18,11 @@ app.use(express.json());
 // URL encoding refers to how JavaScript interprets data sent and coded into a url: https://www.w3schools.com/tags/ref_urlencode.ASP
 app.use(express.urlencoded({ extended: true }));
 
-// App.get is telling express to get whatever is at the designated url path. In this case, we are getting our html file
-
-// app.get("/", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "public", "index.html"));
-// });
-
-// app.get("/whale", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "public", "whale.html"));
-// });
-
 // Using the Express static middleware, express will serve static html files in whatever folder is being pointed to
 
-app.use(express.static(path.join(__dirname, "public")));
-
-// Here we are only sending text but we can format HTML inside the send function as well
-app.get("/hello", (req, res) => {
-	res.send("Hello World");
-});
+// app.use(express.static(path.join(__dirname, "public")));
 
 // Importing our user's array and displaying those to our /api/users path
-
 const { villains, heros } = require("./data/users.json");
 
 app.get("/api/heros", (req, res) => res.json(heros));
