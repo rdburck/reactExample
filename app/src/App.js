@@ -1,17 +1,14 @@
 import "./App.css";
 import "../node_modules/materialize-css/dist/css/materialize.min.css";
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-
-import NavBar from "./components/Navbar";
+import ThemePicker from "./components/ThemePicker";
+import Counter from "./components/Counter";
 
 function App() {
 	return (
 		<div>
-			<NavBar />
-			<Header />
-			<Footer />
+			{/* <ThemePicker /> */}
+			<Counter />
 		</div>
 	);
 }
