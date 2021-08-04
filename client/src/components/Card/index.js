@@ -7,7 +7,7 @@ const Card = (props) => {
 			<div class="col s12 m7">
 				<div class="card">
 					<div class="card-image">
-						<img src="https://materializecss.com/images/sample-1.jpg"></img>
+						<img src={props.src}></img>
 						<span class="card-title">Card Title</span>
 					</div>
 
