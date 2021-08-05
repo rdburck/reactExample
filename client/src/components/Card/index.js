@@ -2,9 +2,13 @@ import React from "react";
 import "./style.css";
 
 const Card = (props) => {
+	
+	if(!props.src) {
+		props.src = "https://materializecss.com/images/sample-1.jpg"
+	}
+
 	return (
-		<div class="row">
-			<div class="col s12 m7">
+			<div class="col s3">
 				<div class="card">
 					<div class="card-image">
 						<img src={props.src}></img>
@@ -20,7 +24,6 @@ const Card = (props) => {
 					</div>
 				</div>
 			</div>
-		</div>
 	);
 };
 

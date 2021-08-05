@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "..//components/Card";
+import Carousel from '..//components/Carousel';
 
 function Gallery() {
 	const images = [
@@ -12,9 +13,18 @@ function Gallery() {
 	];
 
 	return (
+		
 		<div>
-			<Card src={images[0]} />
+			<Carousel />
+
+			<div className="row">
+			{images.map((image) => {
+				return <Card src={image} />;
+			})}
 		</div>
+		
+		</div>
+		
 	);
 }
 
